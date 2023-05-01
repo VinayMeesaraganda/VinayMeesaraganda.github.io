@@ -726,7 +726,7 @@ main {
  * #clients 
  */
 
-.clients { margin-bottom: 15px; }
+.Featured { margin-bottom: 15px; }
 
 .clients-list {
   display: flex;
@@ -754,8 +754,8 @@ main {
   transition: var(--transition-1);
 }
 
-/* .clients-item img:hover { filter: grayscale(0); } */
 
+/* .clients-item img:hover { filter: grayscale(0); } */
 
 
 
