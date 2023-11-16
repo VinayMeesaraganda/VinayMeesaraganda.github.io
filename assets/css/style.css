@@ -1533,6 +1533,13 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 }
 
+.resume-buttons .button {
+  display: inline-block; 
+  border: 2px solid #fff;
+}
+.resume-buttons .button {
+  padding: 10px 20px;
+}
 
 .resume-buttons .button {
   background-color: #333;
