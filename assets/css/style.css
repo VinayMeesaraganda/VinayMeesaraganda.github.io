@@ -1554,3 +1554,20 @@ textarea.form-input::-webkit-resizer { display: none; }
     height: 400px; 
   }
 }
+@media (max-width: 600px) {
+  .resume embed, 
+  .resume iframe {
+    background: #fff;
+    color: #000;
+  }
+}@media (max-width: 600px) {
+  .resume embed,
+  .resume iframe {
+    height: 600px;  
+  }
+}
+.resume iframe {
+  width: 100%;
+  height: 100%;
+  zoom: 0.8;
+}
