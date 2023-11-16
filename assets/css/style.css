@@ -1022,7 +1022,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     margin-inline: auto;
     padding: 30px;
   }
-
+  .sidebar {
+    max-height: 200px;
+  }
   .article-title {
     font-weight: var(--fw-600);
     padding-bottom: 15px;
