@@ -1,0 +1,31 @@
+KPI:
+Number of Listings
+average/median house prices
+average/median rent prices
+average price per square foot
+
+
+
+
+Map:
+plot locations on the map and coolor code them with respective zip codes with median price ranges
+if someone click on the map they should be redirected 
+
+
+barchart:
+compare average prices across cities, across type of home 
+see how prices vary with living area bedroom and bathroom
+
+histogram:
+related to number of listings  with respect to living area(try multiple) with bin size 1000
+
+pie charts:
+No of listing categories by home type
+categorize over price segment
+no of featured lsitings
+no of premium listings
+percentage of homes listed less than zestimate
+
+
+
+
