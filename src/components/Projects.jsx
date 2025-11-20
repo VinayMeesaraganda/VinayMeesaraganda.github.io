@@ -70,48 +70,60 @@ const Projects = () => {
             <div className={`absolute inset-0 bg-gradient-to-br ${categoryGradients[project.category] || 'from-white/5 to-white/5'}`} />
 
             {/* Card Content */}
-            <div className="relative glass-card p-6 h-full flex flex-col hover:border-secondary/50 transition-all duration-300">
+            <div className="relative glass-card h-full flex flex-col hover:border-secondary/50 transition-all duration-300 overflow-hidden">
 
-                {/* Header */}
-                <div className="flex justify-between items-start mb-4">
-                    {project.featured && (
-                        <div className="flex items-center gap-1 px-2 py-1 bg-secondary/20 border border-secondary/30 rounded-full">
-                            <Star className="w-3 h-3 text-secondary fill-secondary" />
-                            <span className="text-xs font-bold text-secondary">Featured</span>
-                        </div>
-                    )}
-                    <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="ml-auto text-text-dim hover:text-secondary transition-colors"
-                    >
-                        <ExternalLink className="w-5 h-5" />
-                    </a>
+                {/* Project Image */}
+                <div className="h-48 overflow-hidden relative group-hover:shadow-lg transition-all">
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-60" />
                 </div>
 
-                {/* Title & Category */}
-                <h4 className="text-xl font-bold text-text-light mb-2 group-hover:text-secondary transition-colors">
-                    {project.title}
-                </h4>
-                <p className="text-xs text-secondary/80 mb-3 font-medium">{project.category}</p>
-
-                {/* Description */}
-                <p className="text-text-dim text-sm mb-6 leading-relaxed flex-grow">
-                    {project.description}
-                </p>
-
-                {/* Tech Stack Badges */}
-                <div className="flex flex-wrap gap-2 mt-auto">
-                    {project.tags.map(tag => (
-                        <span
-                            key={tag}
-                            className={`text-xs font-semibold px-3 py-1 rounded-full border ${techColors[tag] || 'bg-white/5 text-text-dim border-white/10'
-                                }`}
+                <div className="p-6 flex flex-col flex-grow">
+                    {/* Header */}
+                    <div className="flex justify-between items-start mb-4">
+                        {project.featured && (
+                            <div className="flex items-center gap-1 px-2 py-1 bg-secondary/20 border border-secondary/30 rounded-full">
+                                <Star className="w-3 h-3 text-secondary fill-secondary" />
+                                <span className="text-xs font-bold text-secondary">Featured</span>
+                            </div>
+                        )}
+                        <a
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="ml-auto text-text-dim hover:text-secondary transition-colors"
                         >
-                            {tag}
-                        </span>
-                    ))}
+                            <ExternalLink className="w-5 h-5" />
+                        </a>
+                    </div>
+
+                    {/* Title & Category */}
+                    <h4 className="text-xl font-bold text-text-light mb-2 group-hover:text-secondary transition-colors">
+                        {project.title}
+                    </h4>
+                    <p className="text-xs text-secondary/80 mb-3 font-medium">{project.category}</p>
+
+                    {/* Description */}
+                    <p className="text-text-dim text-sm mb-6 leading-relaxed flex-grow">
+                        {project.description}
+                    </p>
+
+                    {/* Tech Stack Badges */}
+                    <div className="flex flex-wrap gap-2 mt-auto">
+                        {project.tags.map(tag => (
+                            <span
+                                key={tag}
+                                className={`text-xs font-semibold px-3 py-1 rounded-full border ${techColors[tag] || 'bg-white/5 text-text-dim border-white/10'
+                                    }`}
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </div>
         </motion.div>
