@@ -207,7 +207,8 @@ const Experience = () => {
                         ))}
 
                         <motion.a
-                            href="https://vinaymeesaraganda.github.io/assets/Resume/Vinay%20Resume.pdf"
+                            href="/Vinay Resume.pdf"
+                            download="Vinay Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
                             whileHover={{ scale: 1.02 }}
