@@ -8,18 +8,15 @@ const Projects = () => {
     const [showAll, setShowAll] = useState(false);
     const categories = ["All", "Data Engineering", "Data Analysis", "Visualization"];
 
-    // Separate featured and non-featured projects
-    const featuredProjects = projects.filter(p => p.featured);
-    const otherProjects = projects.filter(p => !p.featured);
+    // Apply category filter to all projects
+    const filteredProjects = filter === "All"
+        ? projects
+        : projects.filter(p => p.category === filter || (filter === "Data Analysis" && p.category.includes("Machine Learning")));
 
-    // Apply category filter
-    const filterByCategory = (projectList) => {
-        if (filter === "All") return projectList;
-        return projectList.filter(p => p.category === filter || (filter === "Data Analysis" && p.category.includes("Machine Learning")));
-    };
-
-    const filteredFeatured = filterByCategory(featuredProjects);
-    const filteredOther = filterByCategory(otherProjects);
+    // Determine how many projects to show
+    const INITIAL_DISPLAY_COUNT = 6; // Show first 6 projects initially
+    const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, INITIAL_DISPLAY_COUNT);
+    const hasMoreProjects = filteredProjects.length > INITIAL_DISPLAY_COUNT;
 
     // Tech badge colors
     const techColors = {
@@ -45,7 +42,12 @@ const Projects = () => {
         "Time Series": "bg-lime-500/20 text-lime-300 border-lime-500/30",
         Finance: "bg-green-600/20 text-green-200 border-green-600/30",
         "S3": "bg-orange-500/20 text-orange-300 border-orange-500/30",
-        "AWS S3": "bg-orange-500/20 text-orange-300 border-orange-500/30"
+        "AWS S3": "bg-orange-500/20 text-orange-300 border-orange-500/30",
+        "Azure": "bg-blue-600/20 text-blue-200 border-blue-600/30",
+        "Databricks": "bg-red-600/20 text-red-200 border-red-600/30",
+        "PySpark": "bg-orange-600/20 text-orange-200 border-orange-600/30",
+        "ADF": "bg-blue-500/20 text-blue-200 border-blue-500/30",
+        "Unity Catalog": "bg-purple-600/20 text-purple-200 border-purple-600/30"
     };
 
     // Gradient backgrounds for categories
@@ -144,7 +146,10 @@ const Projects = () => {
                     {categories.map((cat) => (
                         <button
                             key={cat}
-                            onClick={() => setFilter(cat)}
+                            onClick={() => {
+                                setFilter(cat);
+                                setShowAll(false); // Reset show all when changing filter
+                            }}
                             className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === cat
                                 ? "bg-secondary text-primary shadow-lg shadow-secondary/20"
                                 : "bg-primary-light text-text-dim hover:text-text-light hover:bg-white/5"
@@ -156,42 +161,17 @@ const Projects = () => {
                 </div>
             </motion.div>
 
-            {/* Featured Projects */}
-            <motion.div
-                layout
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-            >
-                <AnimatePresence>
-                    {filteredFeatured.map((project, index) => (
+            {/* Single Unified Projects Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <AnimatePresence mode="popLayout">
+                    {displayedProjects.map((project, index) => (
                         <ProjectCard key={project.title} project={project} index={index} />
                     ))}
                 </AnimatePresence>
-            </motion.div>
-
-            {/* Other Projects - Expandable */}
-            <AnimatePresence>
-                {showAll && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="overflow-hidden"
-                    >
-                        <motion.div
-                            layout
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-                        >
-                            {filteredOther.map((project, index) => (
-                                <ProjectCard key={project.title} project={project} index={index} />
-                            ))}
-                        </motion.div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+            </div>
 
             {/* Show More/Less Button */}
-            {filteredOther.length > 0 && (
+            {hasMoreProjects && (
                 <div className="text-center">
                     <motion.button
                         onClick={() => setShowAll(!showAll)}
@@ -200,7 +180,7 @@ const Projects = () => {
                         className="inline-flex items-center gap-2 px-8 py-3 bg-white/5 border border-white/10 rounded-full text-text-light hover:bg-white/10 hover:border-secondary/30 transition-all"
                     >
                         <span className="font-medium">
-                            {showAll ? 'Show Less' : `Show More Projects (${filteredOther.length})`}
+                            {showAll ? 'Show Less' : `Show More Projects (${filteredProjects.length - INITIAL_DISPLAY_COUNT})`}
                         </span>
                         {showAll ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
                     </motion.button>

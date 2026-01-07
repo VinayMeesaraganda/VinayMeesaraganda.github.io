@@ -1,5 +1,14 @@
 export const projects = [
     {
+        title: "Azure Crypto Data Lakehouse",
+        category: "Data Engineering",
+        description: "Production-ready ETL pipeline processing 76M+ cryptocurrency trades using Azure Databricks, Medallion Architecture, and Unity Catalog with zero-trust security and incremental processing.",
+        tags: ["Azure", "Databricks", "PySpark", "ADF", "Unity Catalog"],
+        link: "https://medium.com/@raj.vinay2408/how-i-built-a-production-ready-etl-pipeline-for-76-million-crypto-trades-on-azure-data-lakehouse-f916a3acaebe",
+        featured: true,
+        image: "/projects/crypto-lakehouse.png"
+    },
+    {
         title: "Zillow ETL Pipeline",
         category: "Data Engineering",
         description: "End-to-End automated ETL pipeline using Python, Spark, AWS, Airflow, and Tableau to analyze real estate trends.",
