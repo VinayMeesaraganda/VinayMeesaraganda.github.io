@@ -14,7 +14,7 @@ const Projects = () => {
         : projects.filter(p => p.category === filter || (filter === "Data Analysis" && p.category.includes("Machine Learning")));
 
     // Determine how many projects to show
-    const INITIAL_DISPLAY_COUNT = 6; // Show first 6 projects initially
+    const INITIAL_DISPLAY_COUNT = 3; // Show first 3 projects initially
     const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, INITIAL_DISPLAY_COUNT);
     const hasMoreProjects = filteredProjects.length > INITIAL_DISPLAY_COUNT;
 

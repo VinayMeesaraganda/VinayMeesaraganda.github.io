@@ -18,12 +18,20 @@ export const projects = [
         image: "/projects/zillow-etl.png"
     },
     {
+        title: "Loan Default Prediction",
+        category: "Data Analysis",
+        description: "Machine learning model to predict loan defaults, helping financial institutions minimize risk.",
+        tags: ["Python", "Machine Learning", "EDA", "Classification"],
+        link: "https://github.com/VinayMeesaraganda/CS668_Capstone_Project.git",
+        featured: true,
+        image: "/projects/loan-prediction.png"
+    },
+    {
         title: "British Airways Analysis",
         category: "Data Analysis",
         description: "Web scraping and customer sentiment analysis to predict booking behaviors and improve service quality.",
         tags: ["Python", "Scikit-learn", "Web Scraping", "Pandas"],
         link: "https://github.com/VinayMeesaraganda/Python-Projects/blob/main/British%20Airways%20Analysis%20-%20Web%20Scrapping/British%20Airways%20Analysis%20using%20Web%20Scrapping.ipynb",
-        featured: true,
         image: "/projects/british-airways.png"
     },
     {
@@ -33,15 +41,6 @@ export const projects = [
         tags: ["Airflow", "AWS S3", "Python", "Docker"],
         link: "https://medium.com/@raj.vinay2408/end-to-end-data-engineering-project-using-airflow-and-aws-s3-91fa0cddd31c",
         image: "/projects/user-pipeline.png"
-    },
-    {
-        title: "Loan Default Prediction",
-        category: "Data Analysis",
-        description: "Machine learning model to predict loan defaults, helping financial institutions minimize risk.",
-        tags: ["Python", "Machine Learning", "EDA", "Classification"],
-        link: "https://github.com/VinayMeesaraganda/CS668_Capstone_Project.git",
-        featured: true,
-        image: "/projects/loan-prediction.png"
     },
     {
         title: "Music History Viz",
