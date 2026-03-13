@@ -96,6 +96,9 @@ const Hero = () => {
                                 src="/profile.jpg"
                                 alt="Vinay Meesaraganda"
                                 className="w-full h-full object-cover"
+                                loading="lazy"
+                                width="384"
+                                height="384"
                             />
                         </div>
                     </div>

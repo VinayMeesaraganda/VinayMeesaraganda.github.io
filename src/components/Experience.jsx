@@ -73,45 +73,51 @@ const Experience = () => {
     const experience = [
         {
             role: "Data Engineer",
-            company: "Cognizant Consultant / Natsoft Corporation",
+            company: "Natsoft Corporation | Cognizant Consultant – Capital Markets",
             location: "New Jersey, USA",
-            period: "Apr 2024 - Present",
-            current: true,
+            period: "Apr 2024 – Feb 2026",
+            current: false,
             highlights: [
-                "Engineered scalable, event-driven data ingestion pipelines using Azure Functions triggered by file placement in ADLS Gen2, reducing data latency by 20%",
-                "Designed robust ELT architecture using Azure Databricks (PySpark) and Delta Lake with Unity Catalog for improved governance",
-                "Orchestrated complex workflows with Azure Data Factory (ADF) pipelines for 24/7 reliability",
-                "Improved query performance by 15% using Azure Synapse Analytics for large-scale data warehousing",
-                "Maintained 99.5% data integrity through stringent data quality control standards and automated PySpark validation"
+                "Architected a hybrid Medallion Lakehouse on Databricks, orchestrating pipelines with ADF to migrate 15TB+ using Z-Order clustering for Snowflake serving",
+                "Engineered high-concurrency Snowflake serving layer with clustering keys to cut Tableau query latency by 30%",
+                "Enforced SOC2/GDPR compliance with Unity Catalog row-level security and column masking for PII",
+                "Accelerated SLA to sub-5 minutes via event-driven ingestion using Databricks Auto Loader, Event Grid, and Storage Queues",
+                "Eliminated schema-drift failures through dynamic inference in bronze and mergeSchema for silver tables",
+                "Built a metadata-driven PySpark data quality framework with DLQ routing and Azure Monitor logging to maintain 99.5% integrity",
+                "Used Databricks autoscaling and spot instances for non-critical batch to reduce cloud compute by 25%",
+                "Shifted infra provisioning to Terraform CI/CD, cutting environment readiness from 3 days to under 2 hours"
             ],
-            tech: ["Azure", "Databricks", "PySpark", "ADF", "Synapse"]
+            tech: ["Databricks", "ADF", "Snowflake", "Unity Catalog", "Event Grid", "Terraform"]
         },
         {
             role: "Data Engineer",
-            company: "Natsoft Corporation",
+            company: "Natsoft Corporation | Fintech Payments",
             location: "New Jersey, USA",
-            period: "Mar 2023 - Apr 2024",
+            period: "Mar 2023 – Apr 2024",
             current: false,
             highlights: [
-                "Developed real-time payment analytics pipelines on AWS using Lambda and S3-based data lakes",
-                "Improved query performance by 40% through optimized ETL loads with AWS Glue and PySpark",
-                "Cut payment analytics reporting time by 30% via automated data delivery to Tableau dashboards",
-                "Increased reporting accuracy by 30% through schema evolution logic and compliance-driven data quality checks"
+                "Architected terabyte-scale payment pipelines with AWS Glue and PySpark, adding reconciliation logic for 3M+ daily transactions",
+                "Optimized Redshift with staging-table upserts and tuned sort keys, reducing execution time 40% to support near-real-time fraud detection",
+                "Secured data lakes via IAM and Lake Formation tag-based governance to satisfy SOC2 Type II",
+                "Designed dimensional models and materialized views enabling QuickSight trend analysis with sub-second response",
+                "Orchestrated 20+ DAGs in MWAA with sensors and dynamic dependencies to maintain a 99.9% uptime SLA",
+                "Reduced processing costs by 35% through idempotent incremental loads using control tables and zero-duplicate backfills"
             ],
-            tech: ["AWS", "Lambda", "Glue", "Redshift", "Airflow"]
+            tech: ["AWS Glue", "PySpark", "Redshift", "Lake Formation", "Airflow (MWAA)", "QuickSight"]
         },
         {
             role: "Data Analyst",
-            company: "Natsoft Corporation",
+            company: "NAT IT Services Pvt Ltd | Logistics & Supply Chain",
             location: "Hyderabad, India",
-            period: "Sep 2020 - Jan 2022",
+            period: "Mar 2021 – Jan 2022",
             current: false,
             highlights: [
-                "Processed and cleansed 5M+ records using Python and SQL for root-cause analysis",
-                "Reduced manual reporting cycles by 40% through real-time interactive Tableau dashboards for 50+ stakeholders",
-                "Enhanced decision-making efficiency by 25% through predictive modeling and feature engineering"
+                "Promoted from intern after 6 months focused on supply chain optimization and reporting automation",
+                "Performed root-cause analysis on terabytes of logs using Python and SQL, improving inventory forecasting accuracy by 10%",
+                "Automated weekly reporting by building reusable SQL data models for Tableau, eliminating 15+ hours of manual aggregation per week",
+                "Standardized raw logistics datasets with Python cleansing scripts to create ABTs ready for predictive modeling"
             ],
-            tech: ["Python", "SQL", "Tableau", "ML"]
+            tech: ["Python", "Pandas", "SQL", "Tableau"]
         }
     ];
 

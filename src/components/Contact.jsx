@@ -3,9 +3,9 @@ import { Mail, Linkedin, Github, MapPin, Send, Sparkles } from "lucide-react";
 
 const Contact = () => {
     const socialLinks = [
-        { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/vinaykiranraju/", color: "from-blue-500 to-blue-600" },
-        { icon: Github, label: "GitHub", href: "https://github.com/VinayMeesaraganda", color: "from-gray-600 to-gray-700" },
-        { icon: Mail, label: "Email", href: "mailto:raj.vinay2408@gmail.com", color: "from-secondary to-accent-emerald" },
+        { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/vinaykiranraju/", handle: "vinaykiranraju", color: "from-blue-500 to-blue-600" },
+        { icon: Github, label: "GitHub", href: "https://github.com/VinayMeesaraganda", handle: "VinayMeesaraganda", color: "from-gray-600 to-gray-700" },
+        { icon: Mail, label: "Email", href: "mailto:raj.vinay2408@gmail.com", handle: "raj.vinay2408@gmail.com", color: "from-secondary to-accent-emerald" },
     ];
 
     return (
@@ -56,7 +56,7 @@ const Contact = () => {
 
                             <div className="flex items-center gap-2 text-text-muted text-sm">
                                 <MapPin className="w-4 h-4" />
-                                <span>New Jersey, USA</span>
+                                <span>Hyderabad, India</span>
                             </div>
                         </div>
 
@@ -83,7 +83,7 @@ const Contact = () => {
                                         <div className="font-semibold text-text-light group-hover:text-secondary transition-colors">
                                             {social.label}
                                         </div>
-                                        <div className="text-sm text-text-muted">@vinaykiranraju</div>
+                                        <div className="text-sm text-text-muted">{social.handle}</div>
                                     </div>
                                 </motion.a>
                             ))}

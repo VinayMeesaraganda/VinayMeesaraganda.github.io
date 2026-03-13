@@ -1,46 +1,36 @@
-# Vinay Meesaraganda - Data Engineer Portfolio
+# Vinay Kiran Raju — Data Engineer
 
-**Data Engineer | Azure & AWS Specialist | Data Analytics Enthusiast**
+**Databricks Certified | Lakehouse, Governance, Cost/Perf Tuning**  
+Hyderabad, IN · raj.vinay2408@gmail.com · [LinkedIn](https://www.linkedin.com/in/vinaykiranraju/) · [Portfolio](https://vinaymeesaraganda.github.io/) · [GitHub](https://github.com/VinayMeesaraganda)
 
-Welcome to my portfolio! I'm a passionate data engineer with expertise in building scalable ETL pipelines, data lakehouse architectures, and end-to-end data solutions on cloud platforms.
+## What I do
+- Build Medallion Lakehouse platforms on Azure/AWS with Unity Catalog & Snowflake serving.
+- Design event‑driven, metadata‑driven ETL/ELT (Auto Loader, Event Grid/Queues, Airflow) with 99.5% data integrity.
+- Tune warehousing and cloud spend (clustering keys, autoscaling/spot, idempotent backfills).
 
-## 🎯 About Me
+## Recent wins
+- Migrated 15TB+ to a hybrid Databricks + Snowflake stack; Tableau latency improved 30%.
+- Reconciled 3M+ daily payments with Glue/PySpark; Redshift queries sped up 40% for fraud detection.
+- Cut batch compute by 25% via autoscaling + spot; backfill costs down 35% with incremental/idempotent loads.
 
-I'm a Master's graduate in Data Science with hands-on experience in data engineering and analytics. I specialize in designing and implementing production-ready data pipelines using modern cloud technologies like Azure Databricks, AWS, and Apache Airflow. My work focuses on transforming raw data into actionable insights through robust data architectures and advanced analytics.
+## Toolbox
+Python · PySpark · SQL · Databricks · Snowflake · Azure (ADF, Functions, Queues) · AWS (S3, Glue, Lambda, EMR, Redshift) · Airflow (MWAA) · Terraform · Unity Catalog/Lake Formation · Tableau/QuickSight/Looker
 
-## 🚀 Featured Projects
+## Projects
+- **Azure Crypto Lakehouse** — Databricks + Unity Catalog + Snowflake | [Medium](https://medium.com/@raj.vinay2408/how-i-built-a-production-ready-etl-pipeline-for-76-million-crypto-trades-on-azure-data-lakehouse-f916a3acaebe)
+- **Zillow ETL Pipeline** — Python + Spark + Airflow + AWS + Tableau | [Medium](https://medium.com/@raj.vinay2408/data-engineering-project-2-building-an-end-to-end-automated-zillow-etl-pipeline-with-python-4d7d990dfb56)
+- **Loan Default Prediction** — ML classification | [Repo](https://github.com/VinayMeesaraganda/CS668_Capstone_Project)
 
-This portfolio showcases my best work across:
-- **Data Engineering**: Production ETL pipelines processing millions of records
-- **Data Analysis**: Machine learning models and predictive analytics
-- **Data Visualization**: Interactive dashboards and business intelligence
+## Writing
+- End-to-end data engineering on Airflow + AWS S3/Glue/Athena | [Medium](https://medium.com/@raj.vinay2408/end-to-end-data-engineering-project-using-airflow-and-aws-s3-91fa0cddd31c)
+- Credit card fraud detection with ML | [Medium](https://medium.com/@raj.vinay2408/secure-transactions-credit-card-fraud-detection-through-machine-learning-388cdc3e13c0)
 
-**View Live Portfolio**: [vinaymeesaraganda.github.io](https://vinaymeesaraganda.github.io/)
+## Certifications
+Databricks Data Engineer Associate · Azure Data Fundamentals · Snowflake BUILD 2023 Bootcamp · Google Data Analytics · Tableau Desktop Specialist
 
-## 💼 Core Skills
+## How I can help
+- Design/modernize lakehouse architectures (Delta/Unity Catalog, Snowflake) with strong governance.
+- Build event-driven, metadata-driven ETL/ELT with observability and data quality baked in.
+- Optimize warehouse performance and cloud spend without sacrificing SLAs.
 
-**Cloud Platforms**: Azure (Databricks, ADF, Unity Catalog) | AWS (S3, Airflow)  
-**Big Data**: PySpark, Apache Spark, Medallion Architecture  
-**Programming**: Python, SQL  
-**Data Tools**: Tableau, Pandas, Scikit-learn  
-**Orchestration**: Apache Airflow, Azure Data Factory  
-**DevOps**: Docker, Git
-
-## 🏆 Certifications
-
-- **Databricks Certified Data Engineer Associate**
-- **Microsoft Azure Data Fundamentals**
-- **Snowflake Hands-On Essentials**
-- **Google Data Analytics Professional Certificate**
-- **Tableau Desktop Specialist**
-
-## 📫 Contact
-
-- **Email**: vinaymeesaraganda@gmail.com
-- **LinkedIn**: [linkedin.com/in/vinaymeesaraganda](https://linkedin.com/in/vinaymeesaraganda)
-- **GitHub**: [github.com/VinayMeesaraganda](https://github.com/VinayMeesaraganda)
-- **Medium**: [@raj.vinay2408](https://medium.com/@raj.vinay2408)
-
----
-
-*Building data solutions that drive business value* 🚀
+Let’s build reliable data systems that ship insight, not incidents.
